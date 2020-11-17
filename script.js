@@ -15,8 +15,8 @@ new Vue({
         xhr.onload = () => {
             // 將 JSON 資料轉為物件
             var obj = JSON.parse(xhr.responseText);
-
-            console.log(obj);
+            // 資料 = 物件.資料名稱.資料名稱
+            this.datas = obj.result.records;
         }
     }
 });
